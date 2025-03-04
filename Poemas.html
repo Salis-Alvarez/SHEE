@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poemas</title>
+    <link rel="stylesheet" href="PoemasStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Poemas de Amor</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">Deseos & Galería</a></li>
+                <li><a href="Poemas.html">Poemas</a></li>
+                <li><a href="News.html">News Románticas</a></li>
+                <li><a href="Sorpresa.html">Pregunta Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="poems-container">
+        <div class="poem-card">
+            <img src="poema1.jpg" alt="Un amor que siempre está">
+            <h2 onclick="togglePoem(this)">Tu amor que siempre está</h2>
+            <p class="poem-text">
+    Cuando todo se complica y el mundo pesa,  
+    tú eres mi calma, mi certeza.  
+    No hace falta que digas nada,  
+    con solo estar, me das la paz soñada.  
+    
+    Eres mi hogar sin paredes ni techo,  
+    el abrazo que aleja todo lo que me ha hecho daño.  
+    No importa lo qué pase, ni cuánto cambie el camino,  
+    si estás conmigo, todo tiene sentido.  
+            </p>
+        </div>
+    
+        <div class="poem-card">
+            <img src="poema2.jpg" alt="La magia de lo simple">
+            <h2 onclick="togglePoem(this)">Tu magia me da lo simple</h2>
+            <p class="poem-text">
+    No necesito regalos, ni gestos exagerados,  
+    me basta con tus risas y esos ratos a tu lado.  
+    Un paseo sin rumbo, una charla sin prisa,  
+    es en lo más simple donde el amor se desliza.  
+    
+    Tu forma de mirarme cuando no me doy cuenta,  
+    tu voz en la noche cuando el sueño me encuentra.  
+    No hay secretos, solo momentos reales,  
+    y en ellos descubro que eres todo lo que vale.  
+            </p>
+        </div>
+    
+        <div class="poem-card">
+            <img src="RamoSalis.jpg" alt="Un amor que no se apaga">
+            <h2 onclick="togglePoem(this)">Nuestro amor que no se apaga</h2>
+            <p class="poem-text">
+    Si el tiempo corre y todo cambia,  
+    que nuestro amor siempre nos salga al encuentro.  
+    Que pasen los años y sigamos eligiéndonos,  
+    como la primera vez, sin dudarlo ni un momento.  
+    
+    Porque lo nuestro no es de un día,  
+    ni de un suspiro que se va con el viento,  
+    es un amor que crece y brilla,  
+    fuerte, sincero y eterno.  
+            </p>
+        </div>
+    
+        <div class="poem-card">
+            <img src="Tren.jpg" alt="Nuestro propio idioma">
+            <h2 onclick="togglePoem(this)">Nuestro propio idioma</h2>
+            <p class="poem-text">
+    Nos entendemos sin hablar,  
+    como si el mundo girara solo para mirarnos.  
+    Con un gesto ya sé lo que piensas,  
+    con una mirada ya sabes que te extraño.  
+    
+    Es un idioma que nadie más conoce,  
+    hecho de risas, silencios y abrazos.  
+    No hace falta explicarlo, no hace falta decirlo,  
+    porque lo nuestro se siente, sin necesidad de palabras.  
+            </p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Salis Alvarez ❤️ Shahd Ouechtati</p>
+        <small>Created by Salis Alvarez to Mi Mujer.</small>
+    </footer>
+
+    <script>
+        function togglePoem(element) {
+            element.nextElementSibling.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

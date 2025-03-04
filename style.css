@@ -1,0 +1,287 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #a00000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🔴 Sección WELCOME */
+.welcome {
+    background: linear-gradient(135deg, #fbe3e3 0%, #ffffff 100%);
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Luz decorativa */
+.welcome::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: lightMove 6s infinite alternate ease-in-out;
+}
+
+@keyframes lightMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+/* Títulos */
+.welcome h2, .about h2 {
+    font-size: 40px;
+    color: #a00000;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 22px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Tarjetas */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.column {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    width: 30%;
+    min-width: 280px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Iconos de corazón */
+.heart-icon {
+    font-size: 35px;
+    color: #a00000;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.column p {
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.8;
+    padding: 0 10px;
+}
+
+/* 🔴 Sección ABOUT US */
+.about {
+    background: linear-gradient(135deg, #ffffff, #fbe3e3);
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de luz suave */
+.about::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: lightMove 6s infinite alternate ease-in-out;
+}
+
+@keyframes lightMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100px, -100px); }
+}
+
+/* Título */
+.about h2 {
+    font-size: 42px;
+    color: #a00000;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Subtítulo */
+.about .subtitle {
+    font-size: 22px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Contenedor */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* Imagen */
+.about img {
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about img:hover {
+    transform: scale(1.08);
+}
+
+/* Texto */
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Iconos */
+.about-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.icon-box {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    align-items: center;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+}
+
+.icon-box i {
+    font-size: 35px;
+    display: block;
+    color: #a00000;
+    margin-bottom: 10px;
+    text-align: center  ;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+footer {
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+
+footer p {
+    font-weight: bold;
+    color: #a00000;
+}
+
+footer small {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    color: #ccc;
+}

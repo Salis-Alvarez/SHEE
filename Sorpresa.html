@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia? ❤️</title>
+    <link rel="stylesheet" href="SorpresaStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Love Declaration</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">Deseos & Galería</a></li>
+                <li><a href="Poemas.html">Poemas</a></li>
+                <li><a href="News.html">News Románticas</a></li>
+                <li><a href="Sorpresa.html">Pregunta Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>¿Te gustaría volver a ser mi novia? 🥺❤️</h2>
+        <div class="buttons">
+            <button id="yesButton">SÍ 😍</button>
+            <button id="noButton">NO 😡</button>
+        </div>
+        <p id="message" class="hidden">¡Sabía que dirías que sí TE AMOO! ❤️🥰</p>
+    </div>
+
+    <footer>
+        <p>Salis Alvarez ❤️ Shahd Ouechtati</p>
+        <small>Created by Salis Alvarez for Mi Mujer.</small>
+    </footer>
+
+    <!-- Aquí se enlaza el archivo JavaScript -->
+    <script src="script.js"></script>
+
+
+    <script>// Seleccionamos los botones y el mensaje
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
+const message = document.getElementById("message");
+
+// Función para el botón "SÍ"
+yesButton.addEventListener("click", function() {
+    message.classList.remove("hidden");
+});
+
+// Función para el botón "NO"
+noButton.addEventListener("mouseover", function() {
+    let x = Math.random() * (window.innerWidth - this.clientWidth);
+    let y = Math.random() * (window.innerHeight - this.clientHeight);
+    this.style.position = "absolute";
+    this.style.left = `${x}px`;
+    this.style.top = `${y}px`;
+});
+
+// Prevenir que el botón "NO" se mueva al hacer clic
+noButton.addEventListener("click", function(event) {
+    event.preventDefault();
+});
+</script>
+
+
+
+</body>
+</html>
