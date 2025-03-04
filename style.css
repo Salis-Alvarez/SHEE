@@ -260,7 +260,7 @@ nav ul li a {
     }
 
     .about-text {
-        max-width: 100%;
+        max-width: 80%;
         text-align: center;
     }
 }
