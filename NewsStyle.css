@@ -1,28 +1,52 @@
-/* Estilos generales */
+:root {
+    --primary-color: #f5b5b5;
+    --secondary-color: #ffe5e5;
+    --text-color: #2e1e1e;
+    --background-color: #fff8f8;
+    --highlight-color: #b30000;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
+    text-align: center;
+    background-color: var(--background-color);
 }
 
-/* Header */
 header {
-    background-color: #a00000;    
-    color: white;
-    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px 20px 50px 20px;
     text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondo {
+    background-color: var(--primary-color);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -33,14 +57,24 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
-/* Contenedor principal */
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+}
+
+/* Contenedor principal con efecto isla */
 .news-container {
-    padding: 70px 20px;
-    background-color: #fbe3e3;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 70px 20px 100px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid de noticias */
@@ -54,10 +88,10 @@ nav ul li a {
 
 /* Tarjetas de noticias */
 .news-item {
-    background: white;
-    border-radius: 10px;
+    background: var(--background-color);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -73,7 +107,7 @@ nav ul li a {
 
 /* Información de la noticia */
 .news-info {
-    background: #a00000;
+    background: var(--highlight-color);
     color: white;
     padding: 15px;
     text-align: center;
@@ -85,30 +119,36 @@ nav ul li a {
     opacity: 0.8;
 }
 
+/* Segundo contenedor tipo isla */
 .news-container1 {
-    justify-content: center;
-    padding: 50px 20px;
-    background-color: #fbe3e3;
-    padding-top: 20px;
-    padding-bottom: 100px;
+    padding: 50px 20px 100px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid de noticias */
 .news-grid1 {
     display: block;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
     max-width: 500px;
     margin: auto;
 }
 
 /* Tarjetas de noticias */
 .news-item1 {
-    background: white;
-    border-radius: 10px;
+    background: var(--background-color);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.news-item1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .news-item1 img {
@@ -117,14 +157,9 @@ nav ul li a {
     margin: auto;
 }
 
-.news-item1:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
 /* Información de la noticia */
 .news-info1 {
-    background: #a00000;
+    background: var(--highlight-color);
     color: white;
     padding: 15px;
     text-align: center;
@@ -136,19 +171,26 @@ nav ul li a {
     opacity: 0.8;
 }
 
-
-/* Footer */
+/* Pie de página */
 footer {
     background: linear-gradient(to right, #222, #444);
     color: white;
     text-align: center;
     padding: 15px 0;
+    padding-bottom: 30px;
     font-size: 16px;
+    border-radius: 20px;  /* Bordes redondeados */
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar el efecto isla */
+    margin-bottom: 20px;
 }
 
 footer p {
     font-weight: bold;
-    color: #a00000;
+    color: var(--highlight-color);
 }
 
 footer small {
@@ -164,7 +206,7 @@ footer small {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .news-grid {
         grid-template-columns: 1fr;
         padding: 20px;
