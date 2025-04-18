@@ -1,49 +1,87 @@
-/* Estilos generales */
+:root {
+    --primary-color: #f5b5b5;
+    --secondary-color: #ffe5e5;
+    --text-color: #2e1e1e;
+    --background-color: #fff8f8;
+    --highlight-color: #b30000;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
+    text-align: center;
+    background-color: var(--background-color);
 }
 
-/* Header */
 header {
-    background-color: #a00000;
-    color: white;
-    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
     text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondo {
+    background-color: var(--primary-color);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
-/* 🔴 Sección WELCOME */
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+}
+
 .welcome {
-    background: linear-gradient(135deg, #fbe3e3 0%, #ffffff 100%);
-    text-align: center;
+    background-color: var(--secondary-color);
+    max-width: 1200px;
     padding: 80px 20px;
-    border-radius: 20px;
+    border-radius: 20px;  /* Bordes redondeados */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px; /* Separación entre secciones */
 }
 
-/* Luz decorativa */
 .welcome::before {
     content: "";
     position: absolute;
@@ -51,7 +89,7 @@ nav ul li a {
     left: -50px;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.5);
+    background-color: white;
     border-radius: 50%;
     filter: blur(80px);
     animation: lightMove 6s infinite alternate ease-in-out;
@@ -62,17 +100,15 @@ nav ul li a {
     100% { transform: translate(100px, 100px); }
 }
 
-/* Títulos */
 .welcome h2, .about h2 {
     font-size: 40px;
-    color: #a00000;
+    color: var(--highlight-color);
     font-weight: bold;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
-/* Subtítulo */
 .subtitle {
     font-size: 22px;
     color: #444;
@@ -80,7 +116,6 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-/* Tarjetas */
 .columns {
     display: flex;
     justify-content: center;
@@ -88,20 +123,21 @@ nav ul li a {
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .column {
-    background: white;
+    background: var(--background-color);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;  /* Bordes redondeados */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: 0.3s ease-in-out;
     width: 30%;
     min-width: 280px;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s forwards;
+    margin-bottom: 30px; /* Separación entre columnas */
 }
 
 .column:hover {
@@ -114,10 +150,9 @@ nav ul li a {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Iconos de corazón */
 .heart-icon {
     font-size: 35px;
-    color: #a00000;
+    color: var(--highlight-color);
     margin-bottom: 15px;
     display: inline-block;
     animation: pulse 1.5s infinite;
@@ -131,53 +166,26 @@ nav ul li a {
 
 .column p {
     font-size: 18px;
-    color: #333;
+    color: var(--text-color);
     text-align: justify;
     line-height: 1.8;
     padding: 0 10px;
 }
 
-/* 🔴 Sección ABOUT US */
 .about {
-    background: linear-gradient(135deg, #ffffff, #fbe3e3);
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 80px 20px;
-    border-radius: 20px;
+    border-radius: 20px; /* Bordes redondeados */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px; /* Separación entre secciones */
 }
 
-/* Efecto de luz suave */
-.about::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    filter: blur(80px);
-    animation: lightMove 6s infinite alternate ease-in-out;
-}
 
-@keyframes lightMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100px, -100px); }
-}
-
-/* Título */
-.about h2 {
-    font-size: 42px;
-    color: #a00000;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* Subtítulo */
 .about .subtitle {
     font-size: 22px;
     color: #555;
@@ -185,18 +193,16 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-/* Contenedor */
 .about-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     max-width: 1100px;
     margin: auto;
     flex-wrap: wrap;
 }
 
-/* Imagen */
 .about img {
     width: 350px;
     border-radius: 20px;
@@ -208,20 +214,18 @@ nav ul li a {
     transform: scale(1.08);
 }
 
-/* Texto */
 .about-text {
-    max-width: 500px;
+    max-width: 600px;
     text-align: left;
 }
 
 .about-text p {
     font-size: 18px;
-    color: #333;
-    line-height: 1.8;
+    color: var(--text-color);
+    line-height: 1.9s;
     text-align: justify;
 }
 
-/* Iconos */
 .about-icons {
     display: flex;
     justify-content: center;
@@ -230,14 +234,13 @@ nav ul li a {
 }
 
 .icon-box {
-    background: #ffffff;
+    background: white;
     padding: 15px;
     border-radius: 15px;
-    width: 250px;
+    width: 270px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
     text-align: center;
-    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .icon-box:hover {
@@ -247,20 +250,18 @@ nav ul li a {
 .icon-box i {
     font-size: 35px;
     display: block;
-    color: #a00000;
+    color: var(--highlight-color);
     margin-bottom: 10px;
-    text-align: center  ;
 }
 
-/* Responsivo */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         text-align: center;
     }
 
     .about-text {
-        max-width: 80%;
+        max-width: 100%;
         text-align: center;
     }
 }
@@ -272,11 +273,18 @@ footer {
     padding: 15px 0;
     padding-bottom: 30px;
     font-size: 16px;
+    border-radius: 20px;  /* Bordes redondeados */
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar el efecto isla */
+    margin-bottom: 20px;
 }
 
 footer p {
     font-weight: bold;
-    color: #a00000;
+    color: var(--highlight-color);
 }
 
 footer small {
@@ -285,3 +293,4 @@ footer small {
     margin-top: 5px;
     color: #ccc;
 }
+
