@@ -1,60 +1,85 @@
-/* General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+:root {
+    --primary-color: #f5b5b5;
+    --secondary-color: #ffe5e5;
+    --text-color: #2e1e1e;
+    --background-color: #fff8f8;
+    --highlight-color: #b30000;
 }
 
 body {
-    background: #fbe3e3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    color: #444;
+    background-color: var(--background-color);
 }
 
-/* Header */
 header {
-    background-color: #ff6b81;
-    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-header h1 {
-    font-size: 30px;
+.fondo {
+    background-color: var(--primary-color);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul {
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
 }
 
 /* Contenedor Principal */
 .container {
-    background: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: var(--secondary-color);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 55%;
-    min-width: 300px;
+    width: 76%;
+    min-width: 500px;
+    margin-left: 140px;
 }
 
 /* Título Principal */
@@ -123,17 +148,31 @@ button {
 }
 
 
-/* Footer */
+/* Pie de página */
 footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+    background: linear-gradient(to right, #222, #444);
+    color: white;
     text-align: center;
-    font-size: 14px;
-    color: #888;
+    padding: 15px 0;
+    padding-bottom: 30px;
+    font-size: 16px;
+    border-radius: 20px;  /* Bordes redondeados */
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar el efecto isla */
+    margin-bottom: 20px;
 }
 
 footer p {
     font-weight: bold;
-    color: #a00000;
+    color: var(--highlight-color);
+}
+
+footer small {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    color: #ccc;
 }
