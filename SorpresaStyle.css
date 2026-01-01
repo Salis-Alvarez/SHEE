@@ -20,11 +20,10 @@ header {
     border-radius: 20px;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 20px;
+    padding: 20px 20px 30px 20px; /* arriba, derecha, abajo, izquierda */
     text-align: center;
     font-size: 1.2em;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 50px;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -176,3 +175,31 @@ footer small {
     margin-top: 5px;
     color: #ccc;
 }
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 0px 20px 0px; /* reduce el padding en móvil */
+        font-size: 1em; /* opcional: ajustar tamaño de fuente */
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        padding: 0 50px;     /* 🔥 espacio a los lados */
+        box-sizing: border-box;
+    }
+
+    nav ul li a {
+        padding: 6px 0;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255,255,255,0.35);
+        color: var(--highlight-color);
+    }
+}
+
